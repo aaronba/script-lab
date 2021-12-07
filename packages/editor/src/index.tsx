@@ -13,6 +13,7 @@ import queryString from 'query-string';
 import Pages from './pages';
 import AuthPage from './pages/Auth';
 
+// Just trying out publishing PR
 window.onerror = error => invokeGlobalErrorHandler(error);
 
 (async () => {
