@@ -17,17 +17,17 @@ variables:
   isPR: $[ne(variables['System.PullRequest.PullRequestId'], '')]
 
 jobs:
-  - job: PreBuild
-    pool: Azure-Pipelines-EO-Windows2022-Office
-    displayName: 'Pre Build'
-    steps:
-      - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@3
-        displayName: 'Run Credential Scanner'
-        inputs:
-          debugMode: false
+#  - job: PreBuild
+#    pool: Azure-Pipelines-EO-Windows2022-Office
+#    displayName: 'Pre Build'
+#    steps:
+#      - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@3
+#        displayName: 'Run Credential Scanner'
+#        inputs:
+#          debugMode: false
 
-      - task: securedevelopmentteam.vss-secure-development-tools.build-task-eslint.ESLint@1
-        displayName: 'Run ESLint'
+#      - task: securedevelopmentteam.vss-secure-development-tools.build-task-eslint.ESLint@1
+#        displayName: 'Run ESLint'
 
   - job: CommonPipeline
     dependsOn: PreBuild
