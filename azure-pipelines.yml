@@ -30,7 +30,7 @@ jobs:
 #        displayName: 'Run ESLint'
 
   - job: CommonPipeline
-    dependsOn: PreBuild
+#    dependsOn: PreBuild
     displayName: 'Common Pipeline'
     steps:
       - template: package-pipeline-template.yml
@@ -40,7 +40,7 @@ jobs:
           SiteName: 'script-lab-react-storybook'
 
   - job: EditorPipeline
-    dependsOn: PreBuild
+ #   dependsOn: PreBuild
     displayName: 'Editor Pipeline'
     steps:
       - template: package-pipeline-template.yml
@@ -50,7 +50,7 @@ jobs:
           SiteName: 'script-lab-react'
 
   - job: RunnerPipeline
-    dependsOn: PreBuild
+  #  dependsOn: PreBuild
     displayName: 'Runner Pipeline'
     steps:
       - template: package-pipeline-template.yml
@@ -60,7 +60,7 @@ jobs:
           SiteName: 'script-lab-react-runner'
 
   - job: ServerPipeline
-    dependsOn: PreBuild
+   # dependsOn: PreBuild
     displayName: 'Server Pipeline'
     steps:
       - template: package-pipeline-template.yml
